@@ -1,0 +1,122 @@
+#【Matcha_Level_System】
+# Config.yml
+# Tutorial!!!!
+# 「今からこのConfigの説明をするよ！！！！」
+# ↓↓↓
+#  ExpPerLevel:
+#    1: 10
+#    2: 20
+#    3: 30
+# ↑↑↑のように書くことによってレベル毎に必要なExpを設定できます。
+# 何も記述が無ければ100Expでレベルがあがるようになります。
+# ↓↓↓
+#  Player:
+#    Ikirudo:
+#      Exp: 20
+#      Level: 11
+# ↑↑↑のように書くことによってプレイヤーの現在Expとレベルを設定できます。
+# サーバー起動中も逐次更新されますがConfig.yml起動中にログイン中のプレイヤーによってこれが更新されるとエラーが起こるかもしれませんので
+# できるだけサーバー非稼動時（停止中）に更新するようにしてください。
+# ↓↓↓
+#  MobToExp:
+#    BAT: 10
+#    CHICKEN: 10
+#    COD: 10
+#    ...
+#    ....
+#    ....
+#    ZOMBIEHORSE: 90
+#    AGENT: 100
+#    NPC: 100
+# ↑↑↑のように書くことでMobの種類による獲得経験値を設定できます。
+# CODとZOMBIEHORSEの間の省略は書かないでね！！
+# Mobの名前はhttps://minecraft.gamepedia.com/Mobを参考に書きました(スペースを省き全て大文字です)。
+# ですので設定を変更する時は利用すると便利です。
+# 誤字等がありバグが発生した場合はイキるど#5344に報告ください！
+# 以上終わり！！！
+ExpPerLevel:
+  1: 10
+  2: 20
+  3: 30
+  4: 40
+  5: 50
+  6: 60
+  7: 70
+  8: 80
+  9: 90
+  10: 100
+  100: 1000
+Player:
+  Ikirudo:
+    Exp: 20
+    Level: 11
+MobToExp:
+  BAT: 10
+  CHICKEN: 10
+  COD: 10
+  COW: 10
+  PEACEFULDONKEY: 10
+  PEACEFULHORSE: 10
+  MOOSHROOM: 10
+  PEACEFULMULE: 10
+  PEACEFULPARROT: 10
+  PIG: 10
+  RABBIT: 10
+  SHEEP: 10
+  SKELETONHORSE: 10
+  SALMON: 10
+  SQUID: 10
+  TURTLE: 10
+  TROPICALFISH: 10
+  VILLAGER: 10
+  PUFFERFISH: 20
+  DOLPHIN: 30
+  NEUTRALLLAMA: 30
+  POLARBEAR: 30
+  NEUTRALWOLF: 30
+  CAVESPIDER: 40
+  ENDERMAN: 40
+  SPIDER: 40
+  ZOMBIEPIGMAN: 40
+  BLAZE: 50
+  CHICKENJOCKEY: 50
+  CREEPER: 50
+  DROWNED: 50
+  ELDERGUARDIAN: 50
+  ENDERMITE: 50
+  EVOKER: 50
+  GHAST: 50
+  GUARDIAN: 50
+  HUSK: 50
+  MAGMACUBE: 50
+  PHANTOM: 50
+  SHULKER: 50
+  SILVERFISH: 50
+  SKELETON: 50
+  SKELETONHORSEMAN: 50
+  SLIME: 50
+  SPIDERJOCKEY: 50
+  STRAY: 50
+  VEX: 50
+  VINDICATOR: 50
+  WITCH: 50
+  WITHERSKELETON: 50
+  ZOMBIE: 50
+  ZOMBIEVILLAGER: 50
+  TAMEABLEDONKEY: 60
+  TAMEABLEHORSE: 60
+  TAMEABLELLAMA: 60
+  TAMEABLEMULE: 60
+  OCELOT: 60
+  PARROT: 60
+  TAMEABLEWOLF: 60
+  IRONGOLEM: 70
+  SNOWGOLEM: 70
+  ENDERDRAGON: 80
+  WITHER: 80
+  GIANT: 90
+  ILLUSIONER: 90
+  KILLERBUNNY: 90
+  ZOMBIEHORSE: 90
+  AGENT: 100
+  NPC: 100

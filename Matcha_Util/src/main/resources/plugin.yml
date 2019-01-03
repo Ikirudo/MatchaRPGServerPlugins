@@ -1,0 +1,43 @@
+name: Matcha_Util
+version: ${project.version}
+main: net.matcha.matcha_util.Matcha_Util
+api-version: 1.13
+authors: [Ikirudo]
+description: UtilityPlugin in MatchaServer
+commands:
+  ban:
+    description: configにban情報を保存してbanする。
+    usage: /<command> <player>
+    permission: util.op
+    permission-message: You do not have [<permission>].
+  kick:
+    description: configにkick情報を保存してkickする。
+    usage: /<command> <player>
+    permission: util.op
+    permission-message: You do not have [<permission>].
+  minecraft:ban:
+    description: configにban情報を保存してbanする。
+    usage: /<command> <player>
+    permission: util.op
+    permission-message: You do not have [<permission>].
+  minecraft:kick:
+    description: configにkick情報を保存してkickする。
+    usage: /<command> <player>
+    permission: util.op
+    permission-message: You do not have [<permission>].
+  bancheck:
+    description: <player>のban情報を表示。
+    usage: /<command> <player>
+    permission: util.op
+    permission-message: You do not have [<permission>].
+  kickcheck:
+    description: <player>のkick情報を表示。
+    usage: /<command> <player>
+    permission: util.op
+    permission-message: You do not have [<permission>].
+permissions:
+  util.op:
+    default: true
+  util.notop:
+    default: false
+default-permission: util.op

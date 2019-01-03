@@ -1,0 +1,5 @@
+name: Matcha_LevelSystem
+version: ${project.version}
+main: net.matcha.matcha_levelsystem.Matcha_LevelSystem
+authors: [Ikirudo]
+description: LevelSystem in MatchaServer
