@@ -3,3 +3,5 @@ version: 1.0-SNAPSHOT
 main: net.matcha.matcha_levelsystem.Matcha_LevelSystem
 authors: [Ikirudo]
 description: LevelSystem in MatchaServer
+depend: [ActionBarAPI]
+softdepend: [ActionBarAPI]

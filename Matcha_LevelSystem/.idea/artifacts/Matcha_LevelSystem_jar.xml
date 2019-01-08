@@ -3,6 +3,7 @@
     <output-path>$USER_HOME$/Desktop/1.12.2/plugins</output-path>
     <root id="archive" name="Matcha_LevelSystem.jar">
       <element id="module-output" name="Matcha_LevelSystem" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ActionBarAPI-1.5.4.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

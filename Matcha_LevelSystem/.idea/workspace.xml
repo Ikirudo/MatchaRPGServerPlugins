@@ -6,7 +6,43 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d797a07-5f6a-40da-ac69-af2160998eea" name="Default Changelist" comment="" />
+    <list default="true" id="61642bc7-3e55-4d25-82f2-5d65c8f5f746" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/MAO.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/TeruShop.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/head.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/ibu.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/sellshop.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/sozai1.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/アルバイト.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/アロスト.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/イベント.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/ゴルドーナ.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/ドルイド.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/バルディ.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/フォレストスクエア.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/フランのお店.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/ホルンカ.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/両替商.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/修正.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/初期装備.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/夏祭り1.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/夏祭り2.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/始まりの街武器屋.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/始まりの街防具屋.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MAO-System/src/main/resources/始まりの街食料屋.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matcha_Protoco/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Matcha_LevelSystem_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Matcha_LevelSystem_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_12_2_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_12_2_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matcha_LevelSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Matcha_LevelSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/Matcha_LevelSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/Matcha_LevelSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,12 +52,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="391">
+              <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,10 +66,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="32" column="63" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
+            <state relative-caret-position="238">
+              <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -49,30 +103,22 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getcon</find>
-      <find>config.get</find>
-      <find>bed</find>
-      <find>Level:</find>
-      <find>ChatColor.YELLOW+&quot;Level:&quot;+e.getPlayer().getLevel()+ChatColor.RED+&quot;EXP:&quot;+exppercent+&quot;%&quot;</find>
-      <find>float</find>
-      <find>config</find>
-      <find>witch</find>
+      <find>refresh</find>
+      <find>message</find>
+      <find>entitydeat</find>
+      <find>actionbar</find>
     </findStrings>
-    <replaceStrings>
-      <replace>Matcha RPG Server</replace>
-      <replace>&quot;Level:&quot;</replace>
-      <replace>ChatColor.YELLOW+&quot;LEVEL : &quot;+e.getPlayer().getLevel()+&quot;    &quot;+ChatColor.RED+&quot;EXP: &quot;+exppercent+&quot;%&quot;</replace>
-    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Matcha_KickBanList/src/main/java/net/matcha/matcha_kickbanlist/Matcha_KickBanList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Title.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/DynamicScoreboard.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
       </list>
     </option>
   </component>
@@ -81,38 +127,29 @@
       <MavenImportingSettings>
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="171" />
-    <option name="y" value="274" />
-    <option name="width" value="960" />
+    <option name="x" value="250" />
+    <option name="y" value="14" />
+    <option name="width" value="1492" />
     <option name="height" value="1080" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Matcha_LevelSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="Matcha_LevelSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Matcha_LevelSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Matcha_LevelSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Matcha_LevelSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Matcha_LevelSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Matcha_LevelSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -147,30 +184,33 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Matcha_LevelSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="matcha_levelsystem" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546919545257" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Matcha_Protoco" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem\src\main\resources" />
-      <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem\src\main\resources" />
       <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem" />
-      <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem\src\main\java\net\matcha\matcha_levelsystem" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -213,24 +253,34 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4d797a07-5f6a-40da-ac69-af2160998eea" name="Default Changelist" comment="" />
-      <created>1546180391451</created>
+      <changelist id="61642bc7-3e55-4d25-82f2-5d65c8f5f746" name="Default Changelist" comment="" />
+      <created>1546912700773</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1546180391451</updated>
+      <updated>1546912700773</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="171" y="274" width="960" height="1080" extended-state="0" />
+    <frame x="250" y="14" width="1492" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35964912" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -238,88 +288,94 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3299075" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32953367" />
-      <window_info anchor="right" id="Google Cloud Storage" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../Matcha_KickBanList/src/main/java/net/matcha/matcha_kickbanlist/Matcha_KickBanList.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <layout-to-restore>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Matcha_KickBanList/src/main/java/net/matcha/matcha_kickbanlist/Matcha_KickBanList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/DynamicScoreboard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="35" column="14" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="35" selection-end-column="14" />
+        <state relative-caret-position="833">
+          <caret line="155" column="5" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#2934#2935#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/olugin (1).java">
+    <entry file="file://$PROJECT_DIR$/../Matcha_LevelSystem - コピー/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="88" column="48" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+        <state relative-caret-position="325">
+          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="92" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Matcha_LevelSystem.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        <state relative-caret-position="102">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Matcha_Util/src/main/java/net/matcha/matcha_util/Matcha_Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Title.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="32" column="63" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
+        <state relative-caret-position="546">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="391">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -382,6 +438,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
