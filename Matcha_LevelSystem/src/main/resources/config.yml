@@ -1,4 +1,4 @@
-#【Matcha_Level_System】
+#
 # Config.yml
 # Tutorial!!!!
 # 「今からこのConfigの説明をするよ！！！！」
@@ -69,16 +69,17 @@
 # reloadリロードする際はconfigを保存して終了してからしてください。
 # 以上終わり！！！
 ScoreBoard:
-  Title: '  '
+  Title: MatchaRPGServer
   scoreList:
-    '1': §b  Matcha_RPGServer
-    '2': §e LEVEL ; <playerlevel>
-    '3': §4 EXP   ; <playerexp>/<playergenzaihituyounaexp>
-    '4': '   '
-    '5': §b【お知らせ】
-    '6': '       '
-    '7': §c matcha.ga
-    '8': '           '
+    '1': '     '
+    '2': §b-PlayerData-
+    '3': §e §l LEVEL §f §l; <playerlevel>
+    '4': §l  EXP    ; <playerexp>/<playergenzaihituyounaexp>
+    '5': '   '
+    '6': §b-News-
+    '7': §f  現在制作中ﾃﾞｽ!
+    '8': '       '
+    '9': §f        IP:§a matcha.ga
 ActionBar: §eLEVEL;<playerlevel>Lv    §eEXP; <playerexp>/<playergenzaihituyounaexp>
 ExpPerLevel:
   '1': 10
@@ -96,6 +97,10 @@ Player:
   Ikirudo:
     Exp: 20
     Level: 11
+  Matcha_Tb: {}
+  ChaChamattya:
+    Level: 1
+    Exp: 0
 MobToExp:
   BAT: 10
   CHICKEN: 10

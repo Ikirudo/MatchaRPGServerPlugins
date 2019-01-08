@@ -5,3 +5,30 @@ authors: [Ikirudo]
 description: LevelSystem in MatchaServer
 depend: [ActionBarAPI]
 softdepend: [ActionBarAPI]
+commands:
+  levelset:
+    description: 【LevelSystem】PlayerのLevel値を変更する。
+    usage: /<command> [player] value
+    permission: levelsystem.op
+    permission-message: You do not have [<permission>]kengen.
+  expset:
+    description: 【LevelSystem】PlayerのExp値を変更する。
+    usage: /<command> [player] value
+    permission: levelsystem.op
+    permission-message: You do not have [<permission>]kengen.
+  levelreload:
+    description: 【LevelSystem】LevelSystemPluginをリロードする。
+    usage: /<command>
+    permission: levelsystem.op
+    permission-message: You do not have [<permission>]kengen.
+  levelsave:
+    description: 【LevelSystem】オンライン中のプレイヤーのLevelExpの変更をconfigにセーブする。
+    usage: /<command>
+    permission: levelsystem.op
+    permission-message: You do not have [<permission>]kengen.
+permissions:
+  levelsystem.op:
+    default: true
+  levelsystem.notop:
+    default: false
+default-permission: levelsystem.op

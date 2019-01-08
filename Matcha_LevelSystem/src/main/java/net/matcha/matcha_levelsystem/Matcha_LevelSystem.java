@@ -29,7 +29,7 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
     Map<String,Integer > exp = new HashMap<>();
     @Override
     public void onEnable() {
-        getConfig().options().copyDefaults(true);
+        getConfig().options().copyDefaults(false);
         saveDefaultConfig();
         reloadConfig();
         FileConfiguration config = getConfig();
@@ -81,7 +81,8 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
     }
     @EventHandler(priority = EventPriority.HIGHEST)
     public void entitydeathevent(EntityDeathEvent e){
-        if(e.getEntity().getKiller().getType() == EntityType.PLAYER &&e.getEntity().getKiller().getType() != null) {
+        try {
+        if(e.getEntity().getKiller().getType() == EntityType.PLAYER&&e.getEntity().getKiller().getType() != null&&e.getEntity().getKiller() != null) {
             Player p = e.getEntity().getKiller();
             String pname = p.getDisplayName();
             EntityType mobsyurui = e.getEntity().getType();
@@ -112,6 +113,8 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
             saveConfig();
             createScoreboard(p);
             saveConfig();
+        }
+        } catch (NullPointerException event) {
         }
     }
     public void createScoreboard(Player player){
@@ -177,5 +180,92 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
             }
         }
     }
-
+    public boolean onCommand(CommandSender sender, Command cmd, String cmdLine, String[] args) {
+            if (cmd.getName().equalsIgnoreCase("expset")&&sender.hasPermission("levelsystem.op")) {
+                if(args.length != 0) {
+                    String pname = args[0];
+                    int expput = Integer.parseInt(args[1]);
+                    exp.remove(pname);
+                    exp.put(pname, expput);
+                    getConfig().set("Player." + pname + ".Exp", exp.get(pname));
+                    saveConfig();
+                    if (sender instanceof Player) {
+                        Player p = (Player) sender;
+                        int playerlevel = getConfig().getInt("Player."+pname+".Level");
+                        int playerexp = getConfig().getInt("Player."+pname+".Exp");
+                        int playergenzaihituyounaexp;
+                        if(getConfig().getInt("ExpPerLevel."+playerlevel)==0) {
+                            playergenzaihituyounaexp = 100;
+                        }else {
+                            playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
+                        }
+                        createScoreboard(p);
+                        ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                                        .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                                        .replaceAll("<playerexp>", Integer.toString(playerexp))
+                                        .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                        .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
+                                        .replaceAll(";", ":")
+                                ,99);
+                    }return true;
+                }return false;
+            }else if(cmd.getName().equalsIgnoreCase("levelset")&&sender.hasPermission("levelsystem.op")) {
+                if(args.length != 0) {
+                    String pname = args[0];
+                    int levelput = Integer.parseInt(args[1]);
+                    level.remove(pname);
+                    level.put(pname, levelput);
+                    getConfig().set("Player." + pname + ".Level", level.get(pname));
+                    saveConfig();
+                    if (sender instanceof Player) {
+                        Player p = (Player) sender;
+                        int playerlevel = getConfig().getInt("Player."+pname+".Level");
+                        int playerexp = getConfig().getInt("Player."+pname+".Exp");
+                        int playergenzaihituyounaexp;
+                        if(getConfig().getInt("ExpPerLevel."+playerlevel)==0) {
+                            playergenzaihituyounaexp = 100;
+                        }else {
+                            playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
+                        }
+                        createScoreboard(p);
+                        ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                                        .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                                        .replaceAll("<playerexp>", Integer.toString(playerexp))
+                                        .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                        .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
+                                        .replaceAll(";", ":")
+                                ,99);
+                    }return true;
+                }return false;
+            }else if(cmd.getName().equalsIgnoreCase("levelsave")&&sender.hasPermission("levelsystem.op")) {
+                for(Player p : this.getServer().getOnlinePlayers()) {
+                    String pname = p.getDisplayName();
+                    getConfig().set("Player."+pname+".Level",level.get(pname));
+                    getConfig().set("Player."+pname+".Exp",exp.get(pname));
+                    saveConfig();
+                }return true;
+            }else if(cmd.getName().equalsIgnoreCase("levelreload")&&sender.hasPermission("levelsystem.op")) {
+                saveDefaultConfig();
+                reloadConfig();
+                for(Player p : this.getServer().getOnlinePlayers()) {
+                    String pname = p.getDisplayName();
+                    int playerlevel = getConfig().getInt("Player."+pname+".Level");
+                    int playerexp = getConfig().getInt("Player."+pname+".Exp");
+                    int playergenzaihituyounaexp;
+                    if(getConfig().getInt("ExpPerLevel."+playerlevel)==0) {
+                        playergenzaihituyounaexp = 100;
+                    }else {
+                        playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
+                    }
+                    createScoreboard(p);
+                    ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                                    .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                                    .replaceAll("<playerexp>", Integer.toString(playerexp))
+                                    .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                    .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
+                                    .replaceAll(";", ":")
+                            ,99);
+                }return true;
+            }return false;
+    }
 }
