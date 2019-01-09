@@ -43,6 +43,9 @@
 # ↑↑↑のように書くことによりレベル毎に必要なExpを設定できます。
 # 何も記述が無ければ100Expでレベルがあがるようになります。
 # ↓↓↓
+#  MaxLevel: 80
+# ↑↑↑のように書くことで現環境の最大Levelを決めることができます。
+# ↓↓↓
 #  Player:
 #    Ikirudo:
 #      Exp: 20
@@ -77,10 +80,10 @@ ScoreBoard:
     '4': §l  EXP    ; <playerexp>/<playergenzaihituyounaexp>
     '5': '   '
     '6': §b-News-
-    '7': §f  現在制作中ﾃﾞｽ!
+    '7': §f  現在制作中
     '8': '       '
-    '9': §f        IP:§a matcha.ga
-ActionBar: §eLEVEL;<playerlevel>Lv    §eEXP; <playerexp>/<playergenzaihituyounaexp>
+    '9': §a  §l    matcha.ga
+ActionBar: §e §lLEVEL§f §l; <playerlevel>    §lEXP ; <playerexp>/<playergenzaihituyounaexp>
 ExpPerLevel:
   '1': 10
   '2': 20
@@ -93,13 +96,19 @@ ExpPerLevel:
   '9': 90
   '10': 100
   '100': 1000
+MaxLevel: 80
 Player:
   Ikirudo:
     Exp: 20
     Level: 11
-  Matcha_Tb: {}
+  Matcha_Tb:
+    Level: 22
+    Exp: 40
   ChaChamattya:
-    Level: 1
+    Level: 162
+    Exp: 0
+  Zurugu559:
+    Level: 0
     Exp: 0
 MobToExp:
   BAT: 10
@@ -153,7 +162,7 @@ MobToExp:
   WITCH: 50
   WITHERSKELETON: 50
   ZOMBIE: 50
-  ZOMBIEVILLAGER: 50
+  ZOMBIE_VILLAGER: 50
   TAMEABLEDONKEY: 60
   TAMEABLEHORSE: 60
   TAMEABLELLAMA: 60

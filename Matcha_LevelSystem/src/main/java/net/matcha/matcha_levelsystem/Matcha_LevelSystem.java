@@ -95,10 +95,16 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                 playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playergenzailevel);
             }
             if (getConfig().getInt("MobToExp." + mobsyurui) != 0) {
-                nagai(mobsyurui, playergenzaiexp, playergenzaihituyounaexp, playergenzailevel, pname);
+                int maxlevel = getConfig().getInt("MaxLevel");
+                if((level.get(pname)==maxlevel||level.get(pname)>maxlevel)&&(exp.get(pname)==playergenzaihituyounaexp||exp.get(pname)>playergenzaihituyounaexp)){
+                    return;
+                }else{
+                    explevelchange(mobsyurui, playergenzaiexp, playergenzaihituyounaexp, playergenzailevel, pname);
+                }
             } else {
-                p.sendMessage("おかしいぞこのentity(Ikirudoに報告ください)");
-                p.sendMessage("mobの種類を表示test:" + mobsyurui);
+                p.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+"おかしいぞこのentity(Ikirudoに報告ください)");
+                p.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+"mobの種類を表示test:" + mobsyurui);
+                return;
             }
             int playerlevel = level.get(pname);
             int playerexp = exp.get(pname);
@@ -107,7 +113,13 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
             } else {
                 playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
             }
-            ActionBarAPI.sendActionBar(p, ChatColor.YELLOW + "LEVEL:" + playerlevel + "Lv    " + ChatColor.RED + "EXP: " + playerexp + "/" + playergenzaihituyounaexp, 99);
+            ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                            .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                            .replaceAll("<playerexp>", Integer.toString(playerexp))
+                            .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                            .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
+                            .replaceAll(";", ":")
+                    ,99);
             getConfig().set("Player." + pname + ".Level", level.get(pname));
             getConfig().set("Player." + pname + ".Exp", exp.get(pname));
             saveConfig();
@@ -153,18 +165,18 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         }
         player.setScoreboard(board);
     }
-    public void nagai(EntityType mobsyurui,int playergenzaiexp,int playergenzaihituyounaexp,int playergenzailevel,String pname){
+    public void explevelchange(EntityType mobsyurui,int playergenzaiexp,int playergenzaihituyounaexp,int playergenzailevel,String pname){
         int sinexp;
         int sinlevel;
         int mobexp = getConfig().getInt("MobToExp."+mobsyurui);
-        if(playergenzaiexp + mobexp <= playergenzaihituyounaexp) {
+        if(playergenzaiexp + mobexp < playergenzaihituyounaexp) {
             sinexp = playergenzaiexp + mobexp;
             exp.put(pname,sinexp);
         }else if(playergenzaiexp + mobexp == playergenzaihituyounaexp){
             sinexp = playergenzaiexp + mobexp;
             exp.put(pname,sinexp);
         }else {
-            for (playergenzailevel = level.get(pname); playergenzaiexp + mobexp >= playergenzaihituyounaexp; playergenzailevel++) {
+            for (playergenzailevel = level.get(pname); playergenzaiexp + mobexp > playergenzaihituyounaexp; playergenzailevel++) {
                 sinexp = playergenzaiexp + mobexp -playergenzaihituyounaexp ;
                 if(getConfig().getInt("ExpPerLevel."+(playergenzailevel+1))==0) {
                     playergenzaihituyounaexp = 100;
@@ -184,13 +196,85 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
             if (cmd.getName().equalsIgnoreCase("expset")&&sender.hasPermission("levelsystem.op")) {
                 if(args.length != 0) {
                     String pname = args[0];
-                    int expput = Integer.parseInt(args[1]);
-                    exp.remove(pname);
-                    exp.put(pname, expput);
-                    getConfig().set("Player." + pname + ".Exp", exp.get(pname));
-                    saveConfig();
-                    if (sender instanceof Player) {
-                        Player p = (Player) sender;
+                    int maxlevel = getConfig().getInt("MaxLevel");
+                    if(level.get(pname)==maxlevel) {
+                        int sonolevelnogenzaihituyounaexp;
+                        if (getConfig().getInt("ExpPerLevel." + maxlevel) == 0) {
+                            sonolevelnogenzaihituyounaexp = 100;
+                        } else {
+                            sonolevelnogenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + maxlevel);
+                        }
+
+                        if (Integer.parseInt(args[1]) < sonolevelnogenzaihituyounaexp) {
+                            //コマンドで書かれたexp数値が最大レベルの必要EXP以下なら
+                            int expput = Integer.parseInt(args[1]);
+                            exp.remove(pname);
+                            exp.put(pname, expput);
+                            getConfig().set("Player." + pname + ".Exp", exp.get(pname));
+                            saveConfig();
+                            int playerlevel = getConfig().getInt("Player." + pname + ".Level");
+                            int playerexp = getConfig().getInt("Player." + pname + ".Exp");
+                            int playergenzaihituyounaexp;
+                            if (getConfig().getInt("ExpPerLevel." + playerlevel) == 0) {
+                                playergenzaihituyounaexp = 100;
+                            } else {
+                                playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
+                            }
+                            if (sender instanceof Player) {
+                                Player p = (Player) sender;
+                                createScoreboard(p);
+                                ActionBarAPI.sendActionBar(p, getConfig().getString("ActionBar")
+                                                .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                                                .replaceAll("<playerexp>", Integer.toString(playerexp))
+                                                .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                                .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp - playerexp))
+                                                .replaceAll(";", ":")
+                                        , 99);
+                            }
+                            sender.sendMessage(ChatColor.GOLD + "【Matcha_LevelSystem】" + pname + "のEXPが" + expput + "/" + playergenzaihituyounaexp + "に設定されました。");
+                            return true;
+                        }else if(Integer.parseInt(args[1])==sonolevelnogenzaihituyounaexp){
+                            //コマンドで書かれたexp数値が最大レベルの必要EXPなら
+                            int expput = Integer.parseInt(args[1]);
+                            exp.remove(pname);
+                            exp.put(pname, expput);
+                            getConfig().set("Player." + pname + ".Exp", exp.get(pname));
+                            saveConfig();
+                            int playerlevel = getConfig().getInt("Player." + pname + ".Level");
+                            int playerexp = getConfig().getInt("Player." + pname + ".Exp");
+                            int playergenzaihituyounaexp;
+                            if (getConfig().getInt("ExpPerLevel." + playerlevel) == 0) {
+                                playergenzaihituyounaexp = 100;
+                            } else {
+                                playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
+                            }
+                            if (sender instanceof Player) {
+                                Player p = (Player) sender;
+                                createScoreboard(p);
+                                ActionBarAPI.sendActionBar(p, getConfig().getString("ActionBar")
+                                                .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                                                .replaceAll("<playerexp>", Integer.toString(playerexp))
+                                                .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                                .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp - playerexp))
+                                                .replaceAll(";", ":")
+                                        , 99);
+                            }
+                            sender.sendMessage(ChatColor.GOLD + "【Matcha_LevelSystem】" + pname + "のEXPが" + expput + "/" + playergenzaihituyounaexp + "に設定されました。");
+                            sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+pname + "のレベルが現環境の最大レベル且つ最大EXPに設定されました。ご注意ください。");
+                            return true;
+                        }else{
+                            //コマンドで書かれたexp数値が最大レベルの必要EXPより大きく設定されたなら
+                            sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+pname + "のレベルが現環境の最大レベルになっているのでExpは最大以下にしてください。");
+                            return true;
+                        }
+                    }else if(level.get(pname)>maxlevel){
+                        sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+pname+"のレベルが現環境の最大レベルを上回る数値にされているので"+maxlevel+"Lv以下に設定してください。");
+                    }else{
+                        int expput = Integer.parseInt(args[1]);
+                        exp.remove(pname);
+                        exp.put(pname, expput);
+                        getConfig().set("Player." + pname + ".Exp", exp.get(pname));
+                        saveConfig();
                         int playerlevel = getConfig().getInt("Player."+pname+".Level");
                         int playerexp = getConfig().getInt("Player."+pname+".Exp");
                         int playergenzaihituyounaexp;
@@ -199,43 +283,70 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                         }else {
                             playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
                         }
-                        createScoreboard(p);
-                        ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
-                                        .replaceAll("<playerlevel>", Integer.toString(playerlevel))
-                                        .replaceAll("<playerexp>", Integer.toString(playerexp))
-                                        .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
-                                        .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
-                                        .replaceAll(";", ":")
-                                ,99);
-                    }return true;
+                        if (sender instanceof Player) {
+                            Player p = (Player) sender;
+                            createScoreboard(p);
+                            ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                                            .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                                            .replaceAll("<playerexp>", Integer.toString(playerexp))
+                                            .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                            .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
+                                            .replaceAll(";", ":")
+                                    ,99);
+                        }
+                        sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+pname+"のEXPが"+expput+"/"+ playergenzaihituyounaexp +"に設定されました。");
+                        return true;
+                    }
                 }return false;
             }else if(cmd.getName().equalsIgnoreCase("levelset")&&sender.hasPermission("levelsystem.op")) {
                 if(args.length != 0) {
-                    String pname = args[0];
-                    int levelput = Integer.parseInt(args[1]);
-                    level.remove(pname);
-                    level.put(pname, levelput);
-                    getConfig().set("Player." + pname + ".Level", level.get(pname));
-                    saveConfig();
-                    if (sender instanceof Player) {
-                        Player p = (Player) sender;
-                        int playerlevel = getConfig().getInt("Player."+pname+".Level");
-                        int playerexp = getConfig().getInt("Player."+pname+".Exp");
-                        int playergenzaihituyounaexp;
-                        if(getConfig().getInt("ExpPerLevel."+playerlevel)==0) {
-                            playergenzaihituyounaexp = 100;
-                        }else {
-                            playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
+                    if(Integer.parseInt(args[1])<getConfig().getInt("MaxLevel")||Integer.parseInt(args[1])==getConfig().getInt("MaxLevel")) {
+                        String pname = args[0];
+                        int levelput = Integer.parseInt(args[1]);
+                        level.remove(pname);
+                        level.put(pname, levelput);
+                        getConfig().set("Player." + pname + ".Level", level.get(pname));
+                        saveConfig();
+                        if (sender instanceof Player) {
+                            Player p = (Player) sender;
+                            int playerlevel = getConfig().getInt("Player." + pname + ".Level");
+                            int playerexp = getConfig().getInt("Player." + pname + ".Exp");
+                            int playergenzaihituyounaexp;
+                            if (getConfig().getInt("ExpPerLevel." + playerlevel) == 0) {
+                                playergenzaihituyounaexp = 100;
+                            } else {
+                                playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
+                            }
+                            createScoreboard(p);
+                            ActionBarAPI.sendActionBar(p, getConfig().getString("ActionBar")
+                                            .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                                            .replaceAll("<playerexp>", Integer.toString(playerexp))
+                                            .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                            .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp - playerexp))
+                                            .replaceAll(";", ":")
+                                    , 99);
                         }
-                        createScoreboard(p);
-                        ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
-                                        .replaceAll("<playerlevel>", Integer.toString(playerlevel))
-                                        .replaceAll("<playerexp>", Integer.toString(playerexp))
-                                        .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
-                                        .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
-                                        .replaceAll(";", ":")
-                                ,99);
-                    }return true;
+                        sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+pname+"のLEVELが"+levelput+"に設定されました。");
+                        if(Integer.parseInt(args[1])==getConfig().getInt("MaxLevel")){
+                            int maxlevel = getConfig().getInt("MaxLevel");
+                            sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+pname+"のLEVELが現環境の最大レベル"+maxlevel+"に設定されました。");
+                            int sonolevelnogenzaihituyounaexp;
+                            if (getConfig().getInt("ExpPerLevel." + maxlevel) == 0) {
+                                sonolevelnogenzaihituyounaexp = 100;
+                            } else {
+                                sonolevelnogenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + maxlevel);
+                            }
+                            if(exp.get(pname)==sonolevelnogenzaihituyounaexp){
+                                sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+pname + "のレベルが現環境の最大レベル且つ最大EXPに設定されました。ご注意ください。");
+                            }
+                        }
+                        return true;
+                    }else{
+                        int maxlevel = getConfig().getInt("MaxLevel");
+                        sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+"現環境の最大レベルを上回る数値はsetできません。");
+                        sender.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+maxlevel+"Lv以下に設定してください。");
+                        return true;
+                    }
                 }return false;
             }else if(cmd.getName().equalsIgnoreCase("levelsave")&&sender.hasPermission("levelsystem.op")) {
                 for(Player p : this.getServer().getOnlinePlayers()) {
