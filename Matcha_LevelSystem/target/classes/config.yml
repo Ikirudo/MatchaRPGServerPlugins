@@ -72,7 +72,7 @@
 # reloadリロードする際はconfigを保存して終了してからしてください。
 # 以上終わり！！！
 ScoreBoard:
-  Title: MatchaRPGServer
+  Title: §aMatchaRPGServer
   scoreList:
     '1': '     '
     '2': §b-PlayerData-

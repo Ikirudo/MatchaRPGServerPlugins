@@ -141,7 +141,7 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         }
         ScoreboardManager manager = Bukkit.getScoreboardManager();
         Scoreboard board = manager.getNewScoreboard();
-        Objective objective = board.registerNewObjective(getConfig().getString("ScoreBoard.Title"), "dummy");
+        Objective objective = board.registerNewObjective("MatchaRPGServer", "dummy");
         objective.setDisplayName(getConfig().getString("ScoreBoard.Title"));
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         int suujisize = getConfig().getConfigurationSection("ScoreBoard.scoreList").getKeys(false).size();
