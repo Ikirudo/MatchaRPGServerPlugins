@@ -1,15 +1,20 @@
 package net.matcha.matcha_util;
 
-import org.bukkit.BanList;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import org.bukkit.event.EventHandler;
+import ru.beykerykt.lightapi.*;
+import org.bukkit.*;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+import ru.beykerykt.lightapi.chunks.ChunkInfo;
 
+import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -47,7 +52,7 @@ public final class Matcha_Util extends JavaPlugin implements Listener {
         port = 3306;
         database = "matcha_database";
         username = "root";
-        password = "bittinenn3386";
+        password = "Ikirudo";
         if ((cmd.getName().equalsIgnoreCase("ban")||cmd.getName().equalsIgnoreCase("minecraft:ban"))&&sender.hasPermission("util.op")) {
             FileConfiguration config = getConfig();
             Player t = getServer().matchPlayer(args[0]).get(0); //That's the player which should be banned
@@ -244,6 +249,19 @@ public final class Matcha_Util extends JavaPlugin implements Listener {
             return true;
         }
         return false;
+    }
+    @EventHandler
+    public void onPlaceKougenEvent(BlockPlaceEvent event){
+        Player p = event.getPlayer();
+        Block block = event.getBlockPlaced();
+        Location loc = block.getLocation();
+        if (block.getType().equals(Material.GLOWSTONE)&&p.isSneaking()){
+            event.setCancelled(true);
+            LightAPI.createLight(loc,15,true);
+            for (ChunkInfo info : LightAPI.collectChunks(loc)) {
+                LightAPI.updateChunk(info);
+            }
+        }
     }
     private void openConnection() throws SQLException, ClassNotFoundException {
         if (connection != null && !connection.isClosed()) {
