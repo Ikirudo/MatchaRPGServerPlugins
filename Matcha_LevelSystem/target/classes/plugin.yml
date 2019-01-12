@@ -28,7 +28,7 @@ commands:
     permission-message: You do not have [<permission>]kengen.
 permissions:
   levelsystem.op:
-    default: true
-  levelsystem.notop:
     default: false
-default-permission: levelsystem.op
+  levelsystem.notop:
+    default: true
+default-permission: levelsystem.notop
