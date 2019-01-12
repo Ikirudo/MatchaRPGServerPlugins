@@ -2,6 +2,29 @@ ReadItemStackList:
   string:
     ==: org.bukkit.inventory.ItemStack
     type: STRING
+  ミニソード:
+    ==: org.bukkit.inventory.ItemStack
+    type: WOOD_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: §fミニソード
+      lore:
+        - §8>>§eステータス
+        - '§7§l武器タイプ: 片手剣'
+        - '§7§lダメージ: 1'
+        - §8>>§e説明
+        - §7§l§bとても弱いのに対して耐久性だけが抜群の剣
+        - '§8>>§fレア度: §5E'
+      ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        - HIDE_DESTROYS
+        - HIDE_PLACED_ON
+        - HIDE_POTION_EFFECTS
+      Unbreakable: true
+      internal: H4sIAAAAAAAAAIWOMQ6CQBRERzEEMDRGr2FtS0JjIloQDvCFL250dwl8rD2Nx/BsrjHYqHG6yUxeXgSEmCUirdr3wpmt1EFx20UAxh6Colinme0EmK48hM+6YXI9vt09+Im2vXEjRgEm+dkKAk3KHMlUAeI3dkuaMa/ZcKvKJYlQeUpJU82OuWu4JVHWOAwc5vcZf4T8QeiKVz4cFgNW2wtrNpI3zNUvie9v4AFs26vlNQEAAA==
 WriteItemStackList:
   '1':
     ==: org.bukkit.inventory.ItemStack

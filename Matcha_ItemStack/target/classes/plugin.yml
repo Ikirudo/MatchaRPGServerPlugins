@@ -22,7 +22,7 @@ commands:
     permission-message: You do not have [<permission>]kengen.
 permissions:
   itemstack.op:
-    default: true
-  itemstack.notop:
     default: false
-default-permission: itemstack.op
+  itemstack.notop:
+    default: true
+default-permission: itemstack.notop
