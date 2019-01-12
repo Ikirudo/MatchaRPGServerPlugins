@@ -1,0 +1,28 @@
+name: Matcha_ItemStack
+version: 1.0-SNAPSHOT
+main: net.matcha.matcha_itemstack.Matcha_ItemStack
+api-version: 1.13
+authors: [Ikirudo]
+description: MatchaRPGserver専用ItemStackPlugin
+commands:
+  itemstackwrite:
+    description: 【ItemStack】configに手持ちのItemStackを書き込む。
+    usage: /<command>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
+  itemstackread:
+    description: 【ItemStack】configにあるItemStackを読み込む。
+    usage: /<command> <value>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
+  itemstacklist:
+    description: 【ItemStack】configにあるItemStackのリストを表示する。
+    usage: /<command>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
+permissions:
+  itemstack.op:
+    default: true
+  itemstack.notop:
+    default: false
+default-permission: itemstack.op

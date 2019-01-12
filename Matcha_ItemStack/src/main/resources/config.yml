@@ -1,0 +1,8 @@
+ReadItemStackList:
+  string:
+    ==: org.bukkit.inventory.ItemStack
+    type: STRING
+WriteItemStackList:
+  '1':
+    ==: org.bukkit.inventory.ItemStack
+    type: STRING
