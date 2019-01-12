@@ -7,9 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cee9e703-260b-4591-8d9b-754d85d6815a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Matcha_LevelSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_LevelSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Matcha_ItemStack_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Matcha_ItemStack_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_12_2_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_12_2_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matcha_ItemStack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Matcha_ItemStack.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_itemstack/Matcha_ItemStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/matcha/matcha_itemstack/Matcha_ItemStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/.idea/artifacts/Matcha_Util_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/.idea/artifacts/Matcha_Util_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/.idea/libraries/Maven__org_bukkit_bukkit_1_12_2_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Matcha_Util/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Matcha_Util/Matcha_Util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/Matcha_Util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/src/main/java/net/matcha/matcha_util/Matcha_Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/src/main/java/net/matcha/matcha_util/Matcha_Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,12 +35,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+            <state relative-caret-position="430">
+              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
+            <state relative-caret-position="500">
+              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -66,6 +81,8 @@
     <findStrings>
       <find>config</find>
       <find>list</find>
+      <find>1.12</find>
+      <find>1.1</find>
     </findStrings>
     <replaceStrings>
       <replace>getConfig()</replace>
@@ -77,9 +94,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java" />
       </list>
     </option>
@@ -92,11 +109,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="223" />
-    <option name="y" value="217" />
-    <option name="width" value="1469" />
-    <option name="height" value="766" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="920" />
+    <option name="width" value="920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -104,6 +120,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,8 +181,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,8 +188,8 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="matcha_itemstack" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547218835718" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MAOSystem" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547262477254" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -238,20 +254,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1848" height="1088" extended-state="6" />
+    <frame x="920" y="0" width="920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.521789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32887974" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -259,21 +271,28 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32872504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
+        <state relative-caret-position="430">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -291,13 +310,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="500">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -368,7 +384,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.github.tr7zw:Item-NBT-API:1.12.2-R0.1-SNAPSHOT</last-edited>
+          <last-edited>Maven: com.google.code.gson:gson:2.8.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

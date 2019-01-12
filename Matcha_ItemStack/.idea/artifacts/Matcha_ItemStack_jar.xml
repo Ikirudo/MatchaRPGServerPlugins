@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Matcha_ItemStack:jar">
-    <output-path>$USER_HOME$/Desktop/1.12.2/plugins</output-path>
+    <output-path>$USER_HOME$/Desktop/maplerebootserver/plugins</output-path>
     <root id="archive" name="Matcha_ItemStack.jar">
       <element id="module-output" name="Matcha_ItemStack" />
       <element id="library" level="project" name="Maven: com.github.tr7zw:Item-NBT-API:1.12.2-R0.1-SNAPSHOT" />

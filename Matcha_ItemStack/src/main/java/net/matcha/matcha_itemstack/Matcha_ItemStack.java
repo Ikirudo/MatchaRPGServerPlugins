@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,6 +31,12 @@ public final class Matcha_ItemStack extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+    }
+    @EventHandler
+    public  void onJoin(PlayerJoinEvent e){
+        Player p = e.getPlayer();
+        String pname = p.getName();
+        write.put(pname,false);
     }
 
     @EventHandler
@@ -64,6 +71,8 @@ public final class Matcha_ItemStack extends JavaPlugin implements Listener {
                 p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】ItemStackをWrite中ですので何かしらのアイテムを手に持ち何かをクリックしてください。");
                 return;
             }
+        }else{
+            return;
         }
     }
 
