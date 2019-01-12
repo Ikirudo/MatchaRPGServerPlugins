@@ -6,38 +6,38 @@ authors: [Ikirudo]
 description: UtilityPlugin in MatchaServer
 commands:
   ban:
-    description: configにban情報を保存してbanする。
+    description: 【Matcha_Util】configにban情報を保存してbanする。
     usage: /<command> <player>
     permission: util.op
     permission-message: You do not have [<permission>].
   kick:
-    description: configにkick情報を保存してkickする。
+    description: 【Matcha_Util】configにkick情報を保存してkickする。
     usage: /<command> <player>
     permission: util.op
     permission-message: You do not have [<permission>].
   minecraft:ban:
-    description: configにban情報を保存してbanする。
+    description: 【Matcha_Util】configにban情報を保存してbanする。
     usage: /<command> <player>
     permission: util.op
     permission-message: You do not have [<permission>].
   minecraft:kick:
-    description: configにkick情報を保存してkickする。
+    description: 【Matcha_Util】configにkick情報を保存してkickする。
     usage: /<command> <player>
     permission: util.op
     permission-message: You do not have [<permission>].
   bancheck:
-    description: <player>のban情報を表示。
+    description: 【Matcha_Util】<player>のban情報を表示。
     usage: /<command> <player>
     permission: util.op
     permission-message: You do not have [<permission>].
   kickcheck:
-    description: <player>のkick情報を表示。
+    description: 【Matcha_Util】<player>のkick情報を表示。
     usage: /<command> <player>
     permission: util.op
     permission-message: You do not have [<permission>].
 permissions:
   util.op:
-    default: true
-  util.notop:
     default: false
-default-permission: util.op
+  util.notop:
+    default: true
+default-permission: util.notop
