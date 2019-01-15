@@ -1,4 +1,4 @@
-ReadItemStackList:
+ItemStackList:
   string:
     ==: org.bukkit.inventory.ItemStack
     type: STRING
@@ -25,7 +25,6 @@ ReadItemStackList:
         - HIDE_POTION_EFFECTS
       Unbreakable: true
       internal: H4sIAAAAAAAAAIWOMQ6CQBRERzEEMDRGr2FtS0JjIloQDvCFL250dwl8rD2Nx/BsrjHYqHG6yUxeXgSEmCUirdr3wpmt1EFx20UAxh6Colinme0EmK48hM+6YXI9vt09+Im2vXEjRgEm+dkKAk3KHMlUAeI3dkuaMa/ZcKvKJYlQeUpJU82OuWu4JVHWOAwc5vcZf4T8QeiKVz4cFgNW2wtrNpI3zNUvie9v4AFs26vlNQEAAA==
-WriteItemStackList:
   '1':
     ==: org.bukkit.inventory.ItemStack
     type: STRING

@@ -7,17 +7,17 @@ description: MatchaRPGserver専用ItemStackPlugin
 commands:
   itemstackwrite:
     description: 【ItemStack】configに手持ちのItemStackを書き込む。
-    usage: /<command>
+    usage: /[command]
     permission: itemstack.op
     permission-message: You do not have [<permission>]kengen.
   itemstackread:
     description: 【ItemStack】configにあるItemStackを読み込む。
-    usage: /<command> <value>
+    usage: /[command] <value>
     permission: itemstack.op
     permission-message: You do not have [<permission>]kengen.
   itemstacklist:
     description: 【ItemStack】configにあるItemStackのリストを表示する。
-    usage: /<command>
+    usage: /[command] <value>
     permission: itemstack.op
     permission-message: You do not have [<permission>]kengen.
 permissions:

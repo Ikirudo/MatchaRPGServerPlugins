@@ -19,6 +19,7 @@ import java.util.Map;
 public final class Matcha_ItemStack extends JavaPlugin implements Listener {
 
     Map<String,Boolean > write = new HashMap<>();
+    Map<String,String> args0 = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -37,6 +38,7 @@ public final class Matcha_ItemStack extends JavaPlugin implements Listener {
         Player p = e.getPlayer();
         String pname = p.getName();
         write.put(pname,false);
+        args0.put(pname,"taiki");
     }
 
     @EventHandler
@@ -48,24 +50,13 @@ public final class Matcha_ItemStack extends JavaPlugin implements Listener {
         if(write.get(pname)==true) {
             if (item != null) {
                 Configuration config = getConfig();
-                if (getConfig().get("WriteItemStackList.1") == null) {
-                    getConfig().set("WriteItemStackList.1", item);
-                    saveConfig();
-                    write.remove(pname);
-                    write.put(pname,false);
-                    p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】ItemStackをWriteしました。");
-                    return;
-                }
-                for (int suuji = 1; getConfig().get("WriteItemStackList." + suuji) != null; suuji++) {
-                    if (getConfig().get("WriteItemStackList." + (suuji + 1)) == null) {
-                        getConfig().set("WriteItemStackList." + (suuji + 1), item);
-                        saveConfig();
-                        break;
-                    }
-                }
+                getConfig().set("ItemStackList."+args0.get(pname), item);
                 write.remove(pname);
                 write.put(pname,false);
+                args0.remove(pname);
+                args0.put(pname,"taiki");
                 p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】ItemStackをWriteしました。");
+                saveConfig();
                 return;
             }else{
                 p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】ItemStackをWrite中ですので何かしらのアイテムを手に持ち何かをクリックしてください。");
@@ -82,29 +73,36 @@ public final class Matcha_ItemStack extends JavaPlugin implements Listener {
             p = (Player) sender; //That's the current player
             String pname = p.getName();
             if (cmd.getName().equalsIgnoreCase("itemstackwrite")&&sender.hasPermission("itemstack.op")) {
-                write.remove(pname);
-                write.put(pname,true);
-                p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】ItemStackをWriteします。アイテムを手に持ち何かをクリックしてください。");
-                return true;
+                if(args.length>=0) {
+                    write.remove(pname);
+                    write.put(pname, true);
+                    args0.remove(pname);
+                    args0.put(pname, args[0]);
+                    p.sendMessage(ChatColor.GREEN + "【Matcha_ItemStack】ItemStackをWriteします。アイテムを手に持ち何かをクリックしてください。");
+                    return true;
+                }else{
+                    p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】設定するItemStack名が二番目に書かれていません。やり直してください。");
+                    return false;
+                }
             }else if (cmd.getName().equalsIgnoreCase("itemstackread")&&sender.hasPermission("itemstack.op")) {
                 if(args.length>=0) {
-                    ItemStack item = getConfig().getItemStack("ReadItemStackList." + args[0]);
+                    ItemStack item = getConfig().getItemStack("ItemStackList." + args[0]);
                     p.getInventory().addItem(item);
                     return true;
                 }else{
-                    p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】ItemStack名が二番目にありません。やり直してください。");
+                    p.sendMessage(ChatColor.GREEN+"【Matcha_ItemStack】ItemStack名が二番目に書かれていません。やり直してください。");
                     return false;
                 }
             }else if (cmd.getName().equalsIgnoreCase("itemstacklist")&&sender.hasPermission("itemstack.op")) {
-                p.sendMessage(ChatColor.GREEN+"↓【Matcha_ItemStack】ItemReadList↓");
-                List<String> list = getConfig().getStringList("ReadItemStackList");
-                for (String key : getConfig().getConfigurationSection("ReadItemStackList").getKeys(false)) {
+                p.sendMessage(ChatColor.GREEN+"↓【Matcha_ItemStack】ItemStackList↓");
+                List<String> list = getConfig().getStringList("ItemStackList");
+                for (String key : getConfig().getConfigurationSection("ItemStackList").getKeys(false)) {
                     p.sendMessage(key);
                 }
                 for(String risuto : list){
                     p.sendMessage(risuto);
                 }
-                p.sendMessage(ChatColor.GREEN+"↑【Matcha_ItemStack】ItemReadList↑");
+                p.sendMessage(ChatColor.GREEN+"↑【Matcha_ItemStack】ItemStackList↑");
                 return true;
             }
         }
