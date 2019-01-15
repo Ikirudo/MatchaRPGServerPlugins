@@ -3,8 +3,10 @@ package net.matcha.matcha_levelsystem;
 import com.connorlinfoot.actionbarapi.ActionBarAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -34,6 +36,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         reloadConfig();
         FileConfiguration config = getConfig();
         getServer().getPluginManager().registerEvents(this, this);
+        if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")){
+            new OurCoolPlaceholders(this).hook();
+        }
     }
     @Override
     public void onDisable() {
@@ -60,8 +65,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         }else {
             playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
         }
-        createScoreboard(p);
+        //createScoreboard(p);
         ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                        .replaceAll("<playername>", pname)
                 .replaceAll("<playerlevel>", Integer.toString(playerlevel))
                 .replaceAll("<playerexp>", Integer.toString(playerexp))
                 .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
@@ -99,7 +105,7 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                 if((level.get(pname)==maxlevel||level.get(pname)>maxlevel)&&(exp.get(pname)==playergenzaihituyounaexp||exp.get(pname)>playergenzaihituyounaexp)){
                     return;
                 }else{
-                    explevelchange(mobsyurui, playergenzaiexp, playergenzaihituyounaexp, playergenzailevel, pname);
+                    explevelchange(mobsyurui, playergenzaiexp, playergenzaihituyounaexp, playergenzailevel, pname ,p);
                 }
             } else {
                 p.sendMessage(ChatColor.GOLD+"【Matcha_LevelSystem】"+"おかしいぞこのentity(Ikirudoに報告ください)");
@@ -114,6 +120,7 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                 playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
             }
             ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                            .replaceAll("<playername>", pname)
                             .replaceAll("<playerlevel>", Integer.toString(playerlevel))
                             .replaceAll("<playerexp>", Integer.toString(playerexp))
                             .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
@@ -123,7 +130,7 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
             getConfig().set("Player." + pname + ".Level", level.get(pname));
             getConfig().set("Player." + pname + ".Exp", exp.get(pname));
             saveConfig();
-            createScoreboard(p);
+            //createScoreboard(p);
             saveConfig();
         }
         } catch (NullPointerException event) {
@@ -165,9 +172,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         }
         player.setScoreboard(board);
     }
-    public void explevelchange(EntityType mobsyurui,int playergenzaiexp,int playergenzaihituyounaexp,int playergenzailevel,String pname){
-        int sinexp;
-        int sinlevel;
+    public void explevelchange(EntityType mobsyurui,int playergenzaiexp,int playergenzaihituyounaexp,int playergenzailevel,String pname,Player p){
+        int sinexp=0;
+        int sinlevel=1;
         int mobexp = getConfig().getInt("MobToExp."+mobsyurui);
         if(playergenzaiexp + mobexp < playergenzaihituyounaexp) {
             sinexp = playergenzaiexp + mobexp;
@@ -189,6 +196,28 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                 exp.remove(pname);
                 exp.put(pname,sinexp);
                 playergenzaiexp = sinexp;
+            }
+            if(getConfig().getBoolean("LevelUp.Player")) {
+                p.sendMessage((getConfig().getString("LevelUp.PlayerMessage"))
+                        .replaceAll("<playername>", pname)
+                        .replaceAll("<playerlevel>", Integer.toString(sinlevel))
+                        .replaceAll("<playerexp>", Integer.toString(sinexp))
+                        .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                        .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp - sinexp))
+                        .replaceAll(";", ":"));
+            }
+            if(getConfig().getBoolean("LevelUp.TheOthers")) {
+                for (Player list : Bukkit.getOnlinePlayers()) {
+                    if (list.getDisplayName() != pname) {
+                        list.sendMessage((getConfig().getString("LevelUp.TheOthersMessage"))
+                                .replaceAll("<playername>", pname)
+                                .replaceAll("<playerlevel>", Integer.toString(sinlevel))
+                                .replaceAll("<playerexp>", Integer.toString(sinexp))
+                                .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                                .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp - sinexp))
+                                .replaceAll(";", ":"));
+                    }
+                }
             }
         }
     }
@@ -222,8 +251,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                             }
                             if (sender instanceof Player) {
                                 Player p = (Player) sender;
-                                createScoreboard(p);
+                                //createScoreboard(p);
                                 ActionBarAPI.sendActionBar(p, getConfig().getString("ActionBar")
+                                                .replaceAll("<playername>", pname)
                                                 .replaceAll("<playerlevel>", Integer.toString(playerlevel))
                                                 .replaceAll("<playerexp>", Integer.toString(playerexp))
                                                 .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
@@ -250,8 +280,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                             }
                             if (sender instanceof Player) {
                                 Player p = (Player) sender;
-                                createScoreboard(p);
+                                //createScoreboard(p);
                                 ActionBarAPI.sendActionBar(p, getConfig().getString("ActionBar")
+                                                .replaceAll("<playername>", pname)
                                                 .replaceAll("<playerlevel>", Integer.toString(playerlevel))
                                                 .replaceAll("<playerexp>", Integer.toString(playerexp))
                                                 .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
@@ -285,8 +316,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                         }
                         if (sender instanceof Player) {
                             Player p = (Player) sender;
-                            createScoreboard(p);
+                            //createScoreboard(p);
                             ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                                            .replaceAll("<playername>", pname)
                                             .replaceAll("<playerlevel>", Integer.toString(playerlevel))
                                             .replaceAll("<playerexp>", Integer.toString(playerexp))
                                             .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
@@ -317,8 +349,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                             } else {
                                 playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
                             }
-                            createScoreboard(p);
+                            //createScoreboard(p);
                             ActionBarAPI.sendActionBar(p, getConfig().getString("ActionBar")
+                                            .replaceAll("<playername>", pname)
                                             .replaceAll("<playerlevel>", Integer.toString(playerlevel))
                                             .replaceAll("<playerexp>", Integer.toString(playerexp))
                                             .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
@@ -368,8 +401,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                     }else {
                         playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
                     }
-                    createScoreboard(p);
+                    //createScoreboard(p);
                     ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
+                                    .replaceAll("<playername>", pname)
                                     .replaceAll("<playerlevel>", Integer.toString(playerlevel))
                                     .replaceAll("<playerexp>", Integer.toString(playerexp))
                                     .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))

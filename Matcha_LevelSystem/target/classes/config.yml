@@ -72,111 +72,216 @@
 # reloadリロードする際はconfigを保存して終了してからしてください。
 # 以上終わり！！！
 ScoreBoard:
-  Title: §aMatchaRPGServer
+  Title: §a §l≪ Matcha RPG Server ≫
   scoreList:
     '1': '     '
     '2': §b-PlayerData-
-    '3': §e §l LEVEL §f §l; <playerlevel>
+    '3': §e §l LEVEL §f §l; <playerlevel>/20
     '4': §l  EXP    ; <playerexp>/<playergenzaihituyounaexp>
     '5': '   '
-    '6': §b-News-
-    '7': §f  現在制作中
-    '8': '       '
-    '9': §a  §l    matcha.ga
-ActionBar: §e §lLEVEL§f §l; <playerlevel>    §lEXP ; <playerexp>/<playergenzaihituyounaexp>
+    '6': §b-大至急伝言-
+    '7': §c §l・職業担当の方、進捗お願いします
+    '8': §f §l・クエスト案をDiscordまで
+    '9': §f §l・過度な遊びは即BANです
+    '10': '     '
+ActionBar: §e §lLEVEL§f §l; <playerlevel>/20    §lEXP ; <playerexp>/<playergenzaihituyounaexp>
 ExpPerLevel:
-  '1': 10
-  '2': 20
-  '3': 30
-  '4': 40
-  '5': 50
-  '6': 60
-  '7': 70
-  '8': 80
-  '9': 90
-  '10': 100
-  '100': 1000
-MaxLevel: 80
+  '0': 100
+  '1': 1000
+  '2': 2000
+  '3': 3000
+  '4': 4000
+  '5': 5000
+  '6': 6000
+  '7': 7000
+  '8': 8000
+  '9': 9000
+  '10': 10000
+  '11': 11000
+  '12': 12000
+  '13': 13000
+  '14': 14000
+  '15': 15000
+  '16': 16000
+  '17': 17000
+  '18': 18000
+  '19': 19000
+  '20': 20000
+  '21': 21000
+  '22': 22000
+  '23': 23000
+  '24': 24000
+  '25': 25000
+  '26': 26000
+  '27': 27000
+  '28': 28000
+  '29': 29000
+  '30': 30000
+  '31': 31000
+  '32': 32000
+  '33': 33000
+  '34': 34000
+  '35': 35000
+  '36': 36000
+  '37': 37000
+  '38': 38000
+  '39': 39000
+  '40': 40000
+  '41': 41000
+  '42': 42000
+  '43': 43000
+  '44': 44000
+  '45': 45000
+  '46': 46000
+  '47': 47000
+  '48': 48000
+  '49': 49000
+  '50': 50000
+  '51': 51000
+  '52': 52000
+  '53': 53000
+  '54': 54000
+  '55': 55000
+  '56': 56000
+  '57': 57000
+  '58': 58000
+  '59': 59000
+  '60': 60000
+  '61': 61000
+  '62': 62000
+  '63': 63000
+  '64': 64000
+  '65': 65000
+  '66': 66000
+  '67': 67000
+  '68': 68000
+  '69': 69000
+  '70': 70000
+  '71': 71000
+  '72': 72000
+  '73': 73000
+  '74': 74000
+  '75': 75000
+  '76': 76000
+  '77': 77000
+  '78': 78000
+  '79': 79000
+  '80': 80000
+  '81': 81000
+  '82': 82000
+  '83': 83000
+  '84': 84000
+  '85': 85000
+  '86': 86000
+  '87': 87000
+  '88': 88000
+  '89': 89000
+  '90': 90000
+  '91': 91000
+  '92': 92000
+  '93': 93000
+  '94': 94000
+  '95': 95000
+  '96': 96000
+  '97': 97000
+  '98': 98000
+  '99': 99000
+  '100': 100000
+MaxLevel: 20
+LevelUp:
+  Player: true
+  TheOthers: true
+  PlayerMessage: §6【Matcha_LevelSystem】<playerlevel>LVにレベルアップしました。
+  TheOthersMessage: §6【Matcha_LevelSystem】<playername>さんは<playerlevel>LVにレベルアップしました。
 Player:
   Ikirudo:
-    Exp: 20
-    Level: 11
-  Matcha_Tb:
-    Level: 22
-    Exp: 40
-  ChaChamattya:
-    Level: 162
-    Exp: 0
-  Zurugu559:
     Level: 0
     Exp: 0
+  ChaChamattya: {}
+  Zurugu559: {}
+  syucraft_PvP:
+    Level: 0
+    Exp: 0
+  MrR1024:
+    Level: 0
+    Exp: 0
+  Matcha_Server:
+    Level: 0
+    Exp: 0
+  Yocchaan:
+    Level: 0
+    Exp: 0
+  usuraiyukito: {}
+  SkyArts: {}
+  Matcha_Tb: {}
+  68mutuba: {}
 MobToExp:
-  BAT: 10
-  CHICKEN: 10
-  COD: 10
-  COW: 10
-  PEACEFULDONKEY: 10
-  PEACEFULHORSE: 10
-  MOOSHROOM: 10
-  PEACEFULMULE: 10
-  PEACEFULPARROT: 10
-  PIG: 10
-  RABBIT: 10
-  SHEEP: 10
-  SKELETONHORSE: 10
-  SALMON: 10
-  SQUID: 10
-  TURTLE: 10
-  TROPICALFISH: 10
-  VILLAGER: 10
-  PUFFERFISH: 20
-  DOLPHIN: 30
-  NEUTRALLLAMA: 30
-  POLARBEAR: 30
-  NEUTRALWOLF: 30
-  CAVESPIDER: 40
-  ENDERMAN: 40
-  SPIDER: 40
-  ZOMBIEPIGMAN: 40
-  BLAZE: 50
-  CHICKENJOCKEY: 50
-  CREEPER: 50
-  DROWNED: 50
-  ELDERGUARDIAN: 50
-  ENDERMITE: 50
-  EVOKER: 50
-  GHAST: 50
-  GUARDIAN: 50
-  HUSK: 50
-  MAGMACUBE: 50
-  PHANTOM: 50
-  SHULKER: 50
-  SILVERFISH: 50
-  SKELETON: 50
-  SKELETONHORSEMAN: 50
-  SLIME: 50
-  SPIDERJOCKEY: 50
-  STRAY: 50
-  VEX: 50
-  VINDICATOR: 50
-  WITCH: 50
-  WITHERSKELETON: 50
-  ZOMBIE: 50
-  ZOMBIE_VILLAGER: 50
-  TAMEABLEDONKEY: 60
-  TAMEABLEHORSE: 60
-  TAMEABLELLAMA: 60
-  TAMEABLEMULE: 60
-  OCELOT: 60
-  PARROT: 60
-  TAMEABLEWOLF: 60
-  IRONGOLEM: 70
-  SNOWGOLEM: 70
-  ENDERDRAGON: 80
-  WITHER: 80
-  GIANT: 90
-  ILLUSIONER: 90
-  KILLERBUNNY: 90
-  ZOMBIEHORSE: 90
-  AGENT: 100
-  NPC: 100
+  BAT: 1
+  CHICKEN: 1
+  COD: 1
+  COW: 1
+  PEACEFULDONKEY: 1
+  PEACEFULHORSE: 1
+  MOOSHROOM: 1
+  PEACEFULMULE: 1
+  PEACEFULPARROT: 1
+  PIG: 1
+  RABBIT: 1
+  SHEEP: 1
+  SKELETONHORSE: 1
+  SALMON: 1
+  SQUID: 1
+  TURTLE: 1
+  TROPICALFISH: 1
+  VILLAGER: 1
+  PUFFERFISH: 2
+  DOLPHIN: 3
+  NEUTRALLLAMA: 3
+  POLARBEAR: 3
+  NEUTRALWOLF: 3
+  CAVESPIDER: 4
+  ENDERMAN: 4
+  SPIDER: 4
+  ZOMBIEPIGMAN: 4
+  BLAZE: 5
+  CHICKENJOCKEY: 5
+  CREEPER: 5
+  DROWNED: 5
+  ELDERGUARDIAN: 5
+  ENDERMITE: 5
+  EVOKER: 5
+  GHAST: 5
+  GUARDIAN: 5
+  HUSK: 5
+  MAGMACUBE: 5
+  PHANTOM: 5
+  SHULKER: 5
+  SILVERFISH: 5
+  SKELETON: 5
+  SKELETONHORSEMAN: 5
+  SLIME: 3
+  SPIDERJOCKEY: 5
+  STRAY: 5
+  VEX: 5
+  VINDICATOR: 5
+  WITCH: 5
+  WITHERSKELETON: 5
+  ZOMBIE: 5
+  ZOMBIE_VILLAGER: 5
+  TAMEABLEDONKEY: 6
+  TAMEABLEHORSE: 6
+  TAMEABLELLAMA: 6
+  TAMEABLEMULE: 6
+  OCELOT: 6
+  PARROT: 6
+  TAMEABLEWOLF: 6
+  IRONGOLEM: 7
+  SNOWGOLEM: 7
+  ENDERDRAGON: 8
+  WITHER: 8
+  GIANT: 9
+  ILLUSIONER: 9
+  KILLERBUNNY: 9
+  ZOMBIEHORSE: 9
+  AGENT: 10
+  NPC: 10
