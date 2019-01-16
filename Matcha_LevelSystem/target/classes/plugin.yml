@@ -26,6 +26,25 @@ commands:
     usage: /<command>
     permission: levelsystem.op
     permission-message: You do not have [<permission>]kengen.
+  setsp:
+    description: set sp
+    usage: /<command> [sp] <player>
+    permission: levelsystem.op
+    permission-message: You do not have [<permission>]kengen.
+  resetsp:
+    description: reset sp
+    usage: /<command> <player>
+    permission: levelsystem.op
+    permission-message: You do not have [<permission>]kengen.
+  sp:
+    description: sp
+    usage: /<command>
+  stats:
+    description: stats
+    usage: /<command>
+  status:
+    description: statuss
+    usage: /<command>
 permissions:
   levelsystem.op:
     default: false
