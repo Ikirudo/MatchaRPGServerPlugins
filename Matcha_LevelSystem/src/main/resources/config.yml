@@ -85,8 +85,8 @@ ScoreBoard:
     '9': §f §l・過度な遊びは即BANです
     '10': '     '
 ActionBar: §e §lLEVEL§f §l; <playerlevel>/20    §lEXP ; <playerexp>/<playergenzaihituyounaexp>
+ConfigPrefix: §5§lLv§f§l§d§l<playerlevel> §f<playergetname>
 ExpPerLevel:
-  '0': 100
   '1': 1000
   '2': 2000
   '3': 3000
@@ -200,26 +200,41 @@ StatusBairitu:
   DEF: 1
 Player:
   Ikirudo:
-    Level: 0
+    Level: 1
     Exp: 0
-  ChaChamattya: {}
-  Zurugu559: {}
+  ChaChamattya:
+    Level: 1
+    Exp: 0
+  Zurugu559:
+    Level: 1
+    Exp: 0
   syucraft_PvP:
-    Level: 0
+    Level: 1
     Exp: 0
   MrR1024:
-    Level: 0
+    Level: 1
     Exp: 0
   Matcha_Server:
-    Level: 0
+    Level: 1
     Exp: 0
   Yocchaan:
-    Level: 0
+    Level: 1
     Exp: 0
-  usuraiyukito: {}
-  SkyArts: {}
-  Matcha_Tb: {}
-  68mutuba: {}
+  usuraiyukito:
+    Level: 1
+    Exp: 0
+  SkyArts:
+    Level: 1
+    Exp: 0
+  Matcha_Tb:
+    Level: 1
+    Exp: 0
+  68mutuba:
+    Level: 1
+    Exp: 0
+  03gunsou86:
+    Level: 1
+    Exp: 0
 MobToExp:
   BAT: 1
   CHICKEN: 1

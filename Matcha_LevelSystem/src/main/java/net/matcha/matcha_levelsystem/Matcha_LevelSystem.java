@@ -148,6 +148,7 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         if (playerlevel ==0){
             level.put(pname, 1);
             playerlevel = 1;
+            getConfig().set("Player."+pname+".Level",1);
         }else {
             level.put(pname, playerlevel);
         }
@@ -235,8 +236,8 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                 exp.remove(pname);
                 exp.put(pname,sinexp);
                 playergenzaiexp = sinexp;
-                statsManager.setSP(p ,(Long)this.playerYml.sp.get(p.getName())+5);
-                p.sendMessage(this.prefix.getErrorPrefix+"§b§lレベルアップ！ ステータスポイント +5");
+                statsManager.setSP(p ,(Long)this.playerYml.sp.get(p.getName())+2);
+                p.sendMessage(this.prefix.getErrorPrefix+"§b§lレベルアップ！ ステータスポイント +2");
             }
             if(getConfig().getBoolean("LevelUp.Player")) {
                 p.sendMessage((getConfig().getString("LevelUp.PlayerMessage"))
@@ -439,12 +440,13 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                     playergenzaihituyounaexp = getConfig().getInt("ExpPerLevel." + playerlevel);
                 }
                 ActionBarAPI.sendActionBar(p,getConfig().getString("ActionBar")
-                                .replaceAll("<playername>", pname)
-                                .replaceAll("<playerlevel>", Integer.toString(playerlevel))
-                                .replaceAll("<playerexp>", Integer.toString(playerexp))
-                                .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
-                                .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
-                                .replaceAll(";", ":"));
+                        .replaceAll("<playername>", pname)
+                        .replaceAll("<playergetname>",p.getName())
+                        .replaceAll("<playerlevel>", Integer.toString(playerlevel))
+                        .replaceAll("<playerexp>", Integer.toString(playerexp))
+                        .replaceAll("<playergenzaihituyounaexp>", Integer.toString(playergenzaihituyounaexp))
+                        .replaceAll("<playernokoriexp>", Integer.toString(playergenzaihituyounaexp-playerexp))
+                        .replaceAll(";", ":"));
             }
         }.runTaskTimer(this, 0L, 40L);
     }
