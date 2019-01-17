@@ -1,5 +1,10 @@
 package net.matcha.matcha_itemstack;
 
+import net.matcha.matcha_itemstack.commands.Items;
+import net.matcha.matcha_itemstack.commands.TAB.ItemsTAB;
+import net.matcha.matcha_itemstack.listener.player;
+import net.matcha.matcha_itemstack.manager.items.ChatManager;
+import net.matcha.matcha_itemstack.manager.items.MenuManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -11,8 +16,13 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+import net.matcha.matcha_itemstack.util.ItemFile;
+import net.matcha.matcha_itemstack.util.Prefixs;
+import net.matcha.matcha_itemstack.manager.items.CreateManager;
+import net.matcha.matcha_itemstack.commands.Item;
 
 import java.util.HashMap;
+import org.bukkit.plugin.PluginManager;
 import java.util.List;
 import java.util.Map;
 
@@ -21,17 +31,43 @@ public final class Matcha_ItemStack extends JavaPlugin implements Listener {
     Map<String,Boolean > write = new HashMap<>();
     Map<String,String> args0 = new HashMap<>();
 
+    public ChatManager chatManager;
+    public CreateManager createManager;
+    public Prefixs prefix;
+    public ItemFile itemFile;
+    public MenuManager menuManager;
+
     @Override
     public void onEnable() {
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
         reloadConfig();
         getServer().getPluginManager().registerEvents(this, this);
+
+
+        PluginManager pm = getServer().getPluginManager();
+
+        pm.registerEvents(new player(), this);
+        pm.registerEvents(new ChatManager(),this);
+
+        getCommand("items").setExecutor(new Items());
+        getCommand("is").setExecutor(new Items());
+        getCommand("item").setExecutor(new Item());
+        getCommand("i").setExecutor(new Item());
+        getCommand("items").setTabCompleter(new ItemsTAB());
+        getCommand("it").setTabCompleter(new ItemsTAB());
+
+        this.chatManager = new ChatManager();
+        this.createManager = new CreateManager();
+        this.prefix = new Prefixs();
+        this.itemFile = new ItemFile();
+        this.menuManager = new MenuManager();
+
+        this.itemFile.createFile();
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
     @EventHandler
     public  void onJoin(PlayerJoinEvent e){

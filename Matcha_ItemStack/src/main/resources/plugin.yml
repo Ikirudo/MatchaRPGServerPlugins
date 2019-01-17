@@ -20,6 +20,31 @@ commands:
     usage: /[command] <value>
     permission: itemstack.op
     permission-message: You do not have [<permission>]kengen.
+  items:
+    description: 【ItemStack】ItemStackGUI
+    usage: /<command>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
+  is:
+    description: 【ItemStack】ItemStackGUI
+    usage: /<command>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
+  it:
+    description: 【ItemStack】ItemStackGUI
+    usage: /<command>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
+  item:
+    description: Item
+    usage: /<command>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
+  i:
+    description: Item
+    usage: /<command>
+    permission: itemstack.op
+    permission-message: You do not have [<permission>]kengen.
 permissions:
   itemstack.op:
     default: false
