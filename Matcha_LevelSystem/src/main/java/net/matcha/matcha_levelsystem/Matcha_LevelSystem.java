@@ -82,7 +82,6 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         getCommand("stats").setExecutor(new Stats());
         getCommand("status").setExecutor(new Stats());
 
-
         this.levelingManager = new Level();
         this.statsManager = new Stat();
         this.prefix = new Prefixs();
@@ -90,16 +89,12 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         this.statusMenu = new StatusMenu();
         this.playerYml = new PYml();
 
-        for (Player p : getServer().getOnlinePlayers())
-        {
+        for(Player p : this.getServer().getOnlinePlayers()) {
             this.playerYml.createPlayerDeta(p);
             this.statsManager.setStats(p);
             this.scoreBoardManager.sendScoreBoard(p);
             this.scoreBoardManager.SetName(p);
             setActionBar(p);
-        }
-
-        for(Player p : this.getServer().getOnlinePlayers()) {
             String pname = p.getDisplayName();
             int playerlevel = getConfig().getInt("Player."+pname+".Level");
             if (playerlevel ==0){
@@ -128,10 +123,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
     public void onDisable() {
         for (Player p : getServer().getOnlinePlayers())
         {
-            p.closeInventory();
-
+            p.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(armormap.get(p.getDisplayName()));
+            armormap.remove(p.getDisplayName());
             this.playerYml.savePlayerFile(p);
-            p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(armormap.get(p.getDisplayName()));
         }
     }
     @EventHandler
@@ -198,7 +192,6 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         p.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(d);
         int HPbairitu = getConfig().getInt("StatusBairitu.VIT");
         p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(HPbairitu*vit.get(pname)+20);
-
     }
     @EventHandler
     public void onplayerquitevent(PlayerQuitEvent e){
@@ -209,8 +202,9 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         saveConfig();
         level.remove(pname);
         exp.remove(pname);
-        p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(armormap.get(pname));
+        p.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(armormap.get(pname));
         armormap.remove(pname);
+        this.playerYml.savePlayerFile(p);
     }
     public void explevelchange(EntityType mobsyurui,int playergenzaiexp,int playergenzaihituyounaexp,int playergenzailevel,String pname,Player p){
         int sinexp=0;
@@ -523,10 +517,8 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
             BigDecimal bigDecimalAnsqwer = val1.add(val2.multiply(val3));
             double d = bigDecimalAnsqwer.doubleValue();
             player.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(d);
-            int HPbairitu = getConfig().getInt("StatusBairitu.VIT");
-            player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(HPbairitu*vit.get(pname)+20);
         }
-        if (e.getInventory().getName().equalsIgnoreCase("§8>> §3§lステータス割り振り §8<<")) {
+        if (e.getInventory().getName().equalsIgnoreCase("§a§lステータスポイント割り振り")) {
             e.setCancelled(true);
             String dName =null;
             if (e.getCurrentItem().hasItemMeta()) {
@@ -612,7 +604,6 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                 this.statsManager.setStatsDefense(player, this.statsManager.getStatsDefense(player) + 1);
                 this.playerYml.savePlayerFile(player);
                 player.sendMessage(this.prefix.getPrefix + "§9§lDEF§fが1上昇しました。");
-                this.statsManager.setStats(player);
                 this.statusMenu.open(player);
                 String uuid = player.getUniqueId().toString();
                 File directory = new File(Bukkit.getServer().getPluginManager().getPlugin(this.getName()).getDataFolder(), File.separator + "PlayerData");
@@ -630,8 +621,6 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
                 double d = bigDecimalAnsqwer.doubleValue();
                 player.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(d);
                 player.sendMessage("armor:"+d);
-                int HPbairitu = getConfig().getInt("StatusBairitu.VIT");
-                player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(HPbairitu*vit.get(pname)+20);
             }else{
                 player.sendMessage(this.prefix.getPrefix +"割り振るステータスのアイコンをクリックしてください");
                 player.closeInventory();
