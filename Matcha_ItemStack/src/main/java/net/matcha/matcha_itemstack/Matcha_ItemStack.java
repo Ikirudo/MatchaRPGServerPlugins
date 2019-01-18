@@ -48,7 +48,6 @@ public final class Matcha_ItemStack extends JavaPlugin implements Listener {
         PluginManager pm = getServer().getPluginManager();
 
         pm.registerEvents(new player(), this);
-        pm.registerEvents(new ChatManager(),this);
 
         getCommand("items").setExecutor(new Items());
         getCommand("is").setExecutor(new Items());
