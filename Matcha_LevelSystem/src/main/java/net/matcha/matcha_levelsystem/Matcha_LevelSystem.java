@@ -213,9 +213,6 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         if(playergenzaiexp + mobexp < playergenzaihituyounaexp) {
             sinexp = playergenzaiexp + mobexp;
             exp.put(pname,sinexp);
-        }else if(playergenzaiexp + mobexp == playergenzaihituyounaexp){
-            sinexp = playergenzaiexp + mobexp;
-            exp.put(pname,sinexp);
         }else {
             for (playergenzailevel = level.get(pname); playergenzaiexp + mobexp > playergenzaihituyounaexp; playergenzailevel++) {
                 sinexp = playergenzaiexp + mobexp -playergenzaihituyounaexp ;
