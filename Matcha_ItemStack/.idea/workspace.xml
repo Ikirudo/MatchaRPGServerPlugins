@@ -7,10 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cee9e703-260b-4591-8d9b-754d85d6815a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_itemstack/Matcha_ItemStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/matcha/matcha_itemstack/Matcha_ItemStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matcha_LevelSystem/.idea/artifacts/Matcha_LevelSystem_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_LevelSystem/.idea/artifacts/Matcha_LevelSystem_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Matcha_LevelSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_LevelSystem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Matcha_LevelSystem/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_LevelSystem/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Matcha_LevelSystem/target/classes/net/matcha/matcha_levelsystem/Matcha_LevelSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_LevelSystem/target/classes/net/matcha/matcha_levelsystem/Matcha_LevelSystem.class" afterDir="false" />
@@ -29,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/MenuManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="45" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="45" />
+            <state relative-caret-position="289">
+              <caret line="59" column="43" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,32 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/ChatManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/listener/player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state relative-caret-position="289">
+              <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/CreateManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="28" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="28" />
+            <state relative-caret-position="17">
+              <caret line="55" column="28" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,10 +59,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/listener/player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-398">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Load.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Create.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/Prefixs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/ItemFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2975">
-              <caret line="175" column="9" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
+            <state relative-caret-position="459">
+              <caret line="120" column="9" lean-forward="true" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,16 +156,26 @@
       <find>攻撃速度</find>
       <find>&quot;cancel&quot;</find>
       <find>openc</find>
-      <find>playersetting</find>
       <find>現在</find>
       <find>重さ</find>
       <find>start</find>
+      <find>playersetting</find>
+      <find>Event</find>
+      <find>getItemCreater</find>
+      <find>tekisei</find>
+      <find>を入力してください</find>
+      <find>要求する何か</find>
+      <find>load</find>
+      <find>ステータス</find>
+      <find>Item</find>
+      <find>Item.teki</find>
     </findStrings>
     <replaceStrings>
       <replace>getConfig()</replace>
       <replace>import matcha.matcha_itemstack</replace>
       <replace>import net.matcha.matcha_itemstack</replace>
       <replace>GUI</replace>
+      <replace>レベル</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -164,13 +203,13 @@
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Delete.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/List.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/CreateManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/net/matcha/matcha_itemstack/manager2/MenuManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/MenuManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/ItemFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/ChatManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/listener/player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/MenuManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/ChatManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/CreateManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/ItemFile.java" />
       </list>
     </option>
   </component>
@@ -183,10 +222,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="769" />
-    <option name="y" value="91" />
-    <option name="width" value="918" />
-    <option name="height" value="728" />
+    <option name="width" value="919" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,7 +232,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,6 +331,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,7 +340,7 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="matcha_itemstack" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547732221493" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Matcha_LevelSystem" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -373,10 +410,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="769" y="91" width="918" height="728" extended-state="0" />
+    <frame x="0" y="0" width="919" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39310345" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.40068886" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -472,13 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/Prefixs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Delete.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -499,30 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Load.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Edit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="86" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Create.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="45" selection-start-line="10" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -559,10 +569,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/MenuManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/Prefixs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="45" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="45" />
+        <state relative-caret-position="119">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Create.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -571,38 +588,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/ChatManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="289">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/MenuManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/CreateManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/ItemFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="175" column="9" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
+        <state relative-caret-position="289">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -611,8 +608,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/listener/player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="61">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/Matcha_ItemStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-398">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/commands/GUI/Load.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/manager/items/CreateManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_itemstack/util/ItemFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="120" column="9" lean-forward="true" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
