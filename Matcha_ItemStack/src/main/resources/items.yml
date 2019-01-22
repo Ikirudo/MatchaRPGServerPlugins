@@ -1,0 +1,17 @@
+エクスキャリバー:
+  Item:
+    DisplayName: '§eエクスキャリバー'
+    Type: 283
+    Data: 0
+  Stats:
+    Level: 1
+    Type: '片手剣'
+    AttackSpeed: '早い'
+    Damage: 2500
+    Durability: 1000
+    Weight: 10
+  Description:
+    one: '§e聖剣'
+  Effect:
+    Strong: 10
+    Defense: 4
