@@ -3,6 +3,7 @@ package net.matcha.matcha_levelsystem;
 import com.connorlinfoot.actionbarapi.ActionBarAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -21,6 +22,7 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerExpChangeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.matcha.matcha_levelsystem.commands.ResetSP;
@@ -213,8 +215,8 @@ public final class Matcha_LevelSystem extends JavaPlugin implements Listener {
         if(playergenzaiexp + mobexp < playergenzaihituyounaexp) {
             sinexp = playergenzaiexp + mobexp;
             exp.put(pname,sinexp);
-        }else {
-            for (playergenzailevel = level.get(pname); playergenzaiexp + mobexp > playergenzaihituyounaexp; playergenzailevel++) {
+        }else if(playergenzaiexp + mobexp >= playergenzaihituyounaexp){
+            for (playergenzailevel = level.get(pname); playergenzaiexp + mobexp >= playergenzaihituyounaexp; playergenzailevel++) {
                 sinexp = playergenzaiexp + mobexp -playergenzaihituyounaexp ;
                 if(getConfig().getInt("ExpPerLevel."+(playergenzailevel+1))==0) {
                     playergenzaihituyounaexp = 100;
