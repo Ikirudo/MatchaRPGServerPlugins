@@ -88,7 +88,6 @@ public class OurCoolPlaceholders extends EZPlaceholderHook {
                     }
                 }
             }
-            p.sendMessage(String.valueOf(emeraldkazu));
             return String.valueOf(emeraldkazu);
         }
         if(identifier.equals("genzaihp")){
