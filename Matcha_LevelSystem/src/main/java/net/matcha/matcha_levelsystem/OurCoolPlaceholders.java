@@ -86,6 +86,9 @@ public class OurCoolPlaceholders extends EZPlaceholderHook {
                     if (item.getType() == Material.EMERALD) {
                         emeraldkazu += item.getAmount();
                     }
+                    if (item.getType() == Material.EMERALD_BLOCK) {
+                        emeraldkazu += item.getAmount()*9;
+                    }
                 }
             }
             return String.valueOf(emeraldkazu);

@@ -87,12 +87,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>com.connorlinfoot</groupId>
             <artifactId>actionbarapi</artifactId>
             <version>1.12.2-R0.1-SNAPSHOT</version>
@@ -106,5 +100,13 @@
                 <version>2.9.2</version>
                 <scope>provided</scope>
             </dependency>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>system</scope>
+            <systemPath>${basedir}/craftbukkit-1.12.2.jar</systemPath>
+        </dependency>
     </dependencies>
 </project>

@@ -8,9 +8,29 @@
   <component name="ChangeListManager">
     <list default="true" id="61642bc7-3e55-4d25-82f2-5d65c8f5f746" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Matcha_ItemStack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_ItemStack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_ItemStack/src/main/java/net/matcha/matcha_itemstack/util/ItemFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_ItemStack/src/main/java/net/matcha/matcha_itemstack/util/ItemFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matcha_LevelSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Matcha_LevelSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/OurCoolPlaceholders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/OurCoolPlaceholders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/Matcha_LevelSystem$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/Matcha_LevelSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/OurCoolPlaceholders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/commands/ResetSP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/commands/SP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/commands/SetSP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/commands/Stats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/manager/Level.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/manager/Stat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/manager/player/ScoreBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/manager/player/StatusMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/util/PYml.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/matcha/matcha_levelsystem/util/Prefixs.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Matcha_Util/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/Matcha_Util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/Matcha_Util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/src/main/java/net/matcha/matcha_util/Matcha_Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/src/main/java/net/matcha/matcha_util/Matcha_Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matcha_Util/target/classes/net/matcha/matcha_util/Matcha_Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Matcha_Util/target/classes/net/matcha/matcha_util/Matcha_Util.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,21 +43,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/manager/player/ScoreBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="838">
               <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,10 +58,19 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/OurCoolPlaceholders.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
-              <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+              <caret line="89" column="57" selection-start-line="89" selection-start-column="57" selection-end-line="89" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="719">
+              <caret line="105" column="51" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -216,13 +233,13 @@
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/ArmorEquipEvents/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/ArmorEquipEvents/ArmorListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/ArmorEquipEvents/ArmorEquipEvent.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/manager/player/ScoreBoard.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/manager/player/StatusMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/util/PYml.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/OurCoolPlaceholders.java" />
       </list>
     </option>
@@ -247,8 +264,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="172" />
-    <option name="y" value="22" />
+    <option name="x" value="500" />
+    <option name="y" value="24" />
     <option name="width" value="1288" />
     <option name="height" value="1032" />
   </component>
@@ -258,6 +275,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,7 +362,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,19 +369,19 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="matcha_levelsystem" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547817488768" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Matcha_ItemStack" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548148397956" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem" />
+      <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem\src\main\java\net\matcha\matcha_levelsystem\manager" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem\src\main\resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem\src\main\java\net\matcha\matcha_levelsystem\manager" />
-      <recent name="C:\Users\bit\IdeaProjects\Matcha_LevelSystem" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -421,10 +438,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="172" y="22" width="1288" height="1032" extended-state="0" />
+    <frame x="500" y="24" width="1288" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.225" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23790322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -441,7 +458,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.327852" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32715377" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -516,13 +533,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/ArmorEquipEvents/ArmorListener.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/ArmorEquipEvents/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/ArmorEquipEvents/ArmorEquipEvent.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Matcha_LevelSystem.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -641,9 +651,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="105" column="51" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/Matcha_LevelSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="838">
           <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -654,7 +671,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/net/matcha/matcha_levelsystem/OurCoolPlaceholders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
-          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+          <caret line="89" column="57" selection-start-line="89" selection-start-column="57" selection-end-line="89" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
