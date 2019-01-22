@@ -71,13 +71,13 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.13.2-R0.1-SNAPSHOT</version>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>ru.beykerykt</groupId>
             <artifactId>lightapi</artifactId>
-            <version>1.13.2-R0.1-SNAPSHOT</version>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
             <type>jar</type>
             <scope>system</scope>
             <systemPath>${basedir}/lightapi-3.2.9.jar</systemPath>
@@ -85,8 +85,16 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.13.2-R0.1-SNAPSHOT</version>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>system</scope>
+            <systemPath>${basedir}/craftbukkit-1.12.2.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

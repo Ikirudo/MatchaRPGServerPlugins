@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Matcha_Util:jar">
-    <output-path>$USER_HOME$/Desktop/maplerebootserver/plugins</output-path>
+    <output-path>$USER_HOME$/Desktop/1.12.2/plugins</output-path>
     <root id="archive" name="Matcha_Util.jar">
       <element id="module-output" name="Matcha_Util" />
     </root>

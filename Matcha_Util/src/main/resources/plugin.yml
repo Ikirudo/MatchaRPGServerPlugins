@@ -3,6 +3,7 @@ version: ${project.version}
 main: net.matcha.matcha_util.Matcha_Util
 api-version: 1.13
 authors: [Ikirudo]
+softdepend: [Matcha_ItemStack]
 description: UtilityPlugin in MatchaServer
 commands:
   ban:
